@@ -1,5 +1,5 @@
 -- Company images table.
-create table common.company_images (
+create table if not exists common.company_images (
     fkey    uuid references common.companies,
     t       text default 'common.companies' check (t = 'common.companies')
 ) inherits (common.images);
